@@ -51,7 +51,9 @@ From the intrinsic definition of the PL (see[^1] and [^2] for more details):
 $$I_{PL}(t) \propto \int_0^L dz \ (n(z,t)^2-n_i^2)$$
 
 One can compute the time derivative of the PL intensity and plug in the drift diffusion equation to find: 
-$$      \frac{dI_{\text{PL}}}{dt}(t)$$
+$$\frac{dI_{PL}}{dt}(t)$$
+ok
+
 $$=-2A \left[ \underbrace{k_1\int_{0}^{L}{dz\ \Delta n^2}}_{\mathrm{(i)}}+\underbrace{S_{top}\Delta n^2\left(z=0,t\right)}_{\mathrm{(ii)}}  +\underbrace{S_{bot}\Delta n^2\left(z=L,t\right)}_{\mathrm{(iii)}}+\underbrace{D\int_{0}^{L}{dz\ \left(\frac{\partial\Delta n}{\partial z}\left(z,t\right)\right)^2}}_{\mathrm{(iv)}} +\underbrace{k_2\int_{0}^{L}{dz\ \Delta n^3}}_{\mathrm{(v)}} \right]$$
 
 Each of these terms can be plotted as a share of the total variation for each instant of time. This allows to plot the instantaneous contributions as shown above.
