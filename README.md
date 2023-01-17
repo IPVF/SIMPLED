@@ -3,6 +3,8 @@
 ## License
 This code is distributed under the Creative Commons Attribution-NonCommercial 4.0 International license. 
 
+## Requirements
+This code requires the `Matlab` software as well as the `pdepe` code
 ## Description
 <p align="center">
   <img width="450"  src="exampleImages/share_decay_over_time.png">
