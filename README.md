@@ -50,9 +50,9 @@ From the intrinsic definition of the PL (see[^1] and [^2] for more details):
 
 $$I_{PL}(t) \propto \int_0^L dz \ (n(z,t)^2-n_i^2)$$
 
-One can compute the time derivative of the PL intensity and plug in the drift diffusion equation to find: 
+One can compute the time derivative of the PL intensity and plug in the drift diffusion equation to find (in the limit where we neglect $n_i$ compared to all densities present): 
 
-$$\frac{dI_{PL}}{dt}(t)=-2A \left[ \underbrace{k_1\int_{0}^{L}{dz\ \Delta n^2}}_{\mathrm{(i)}}+\underbrace{S_{top}\Delta n^2\left(z=0,t\right)}_{\mathrm{(ii)}}  +\underbrace{S_{bot}\Delta n^2\left(z=L,t\right)}_{\mathrm{(iii)}}+\underbrace{D\int_{0}^{L}{dz\ \left(\frac{\partial\Delta n}{\partial z}\left(z,t\right)\right)^2}}_{\mathrm{(iv)}} +\underbrace{k_2\int_{0}^{L}{dz\ \Delta n^3}}_{\mathrm{(v)}} \right]$$
+$$\frac{dI_{PL}}{dt}(t)=-2A \left[ \underbrace{k_1\int_{0}^{L}{dz\  \frac{n^3}{ n + N_{bulk}} }}_{\mathrm{(i)}}+\underbrace{S_{top} \frac{n^3\left(z=0,t\right)}{n\left(z=0,t\right)+ N_{top}}}_{\mathrm{(ii)}}  +\underbrace{S_{bot} \frac{n^3\left(z=L,t\right)}{n\left(z=L,t\right)+ N_{bot}}}_{\mathrm{(iii)}} \\+\underbrace{D\int_{0}^{L}{dz\ \left(\frac{\partial n}{\partial z}\left(z,t\right)\right)^2}}_{\mathrm{(iv)}} +\underbrace{k_2\int_{0}^{L}{dz\ n^3}}_{\mathrm{(v)}} \right]$$
 
 Each of these terms can be plotted as a share of the total variation for each instant of time. This allows to plot the instantaneous contributions as shown above.
 
