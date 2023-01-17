@@ -12,7 +12,7 @@
 % DEFINTION OF THE INPUTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 durationOfSimulation = 2000e-9;
-laserFluence = 1e12; % in ph/cm²
+laserFluence = 1e10; % in ph/cm²
 
 % Color Palette
 colorPalette=[  [38, 70, 83]/255,	          	
@@ -31,16 +31,16 @@ parameters.zvec = linspace(0,parameters.thickness,100); %in cm
 parameters.tvec = logspace(-14,log10(durationOfSimulation),3000);
 
 % TRANSPORT PROPERTIES
-parameters.D = 4.5e-3; % cm^2/s
+parameters.D = 5e-3; % cm^2/s
 parameters.ni = 1e4;
 
 % RECOMBINATION : RADIATIVE
-parameters.k2 = 2.9e-11; %cm^3/s
+parameters.k2 = 1e-10; %cm^3/s
 
 %  RECOMBINATION : SRH
 parameters.srhOn = 1;
 parameters.Nbulk = 0;% per cc
-parameters.k1 = 3.9e5;% in s^-1
+parameters.k1 = 1/500e-9;% in s^-1
 
 % TOP SRH
 parameters.Stop = 50;%cm/s
@@ -51,7 +51,7 @@ parameters.Sbot = 25;%cm/s
 parameters.Nbot = 0; % per cc
 
 % INITIAL CONDITION
-parameters.alpha = 2*6.5e4; %cm^-1
+parameters.alpha = 1e5; %cm^-1
 parameters.ngamma = laserFluence; %ph.cm^-2 ; corresponds to ngamma * alpha(Laser wavelength)
 parameters.initialElectrons = @(x,parameters) parameters.ni;
 
@@ -60,11 +60,11 @@ parameters.tPulse = 50e-12;
 
 % GENERATION RATE
 parameters.factorFluence = 1;
-parameters.generationRate =  @(z,t,modelParameterZ) 1*modelParameterZ.factorFluence*modelParameterZ.alpha*exp(-modelParameterZ.alpha*z)*(modelParameterZ.ngamma)*(1/(sqrt(2*pi)*modelParameterZ.sigmaPulse)).*exp(-(t-modelParameterZ.tPulse).^2/(2*modelParameterZ.sigmaPulse^2));%modelParameterZ.alpha*exp(-modelParameterZ.alpha*z)
+parameters.generationRate =  @(z,t,modelParameterZ) 1*modelParameterZ.factorFluence*modelParameterZ.alpha*exp(-modelParameterZ.alpha*z)*(modelParameterZ.ngamma)*(1/(sqrt(2*pi)*modelParameterZ.sigmaPulse)).*exp(-(t-modelParameterZ.tPulse).^2/(2*modelParameterZ.sigmaPulse^2));
 
 % Post-Treatment
 parameters.postTreatment = "gating";
-parameters.delta = 1.3411e-9;% delay between laser and camera 0.586e-9 for reguar and 1.3411e-9 for superResolved
+parameters.delta = 0e-9;% delay between laser and camera
 parameters.gateWidth = 3e-9; %s
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

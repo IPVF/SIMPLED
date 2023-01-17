@@ -1,14 +1,12 @@
 
 function [sol]=solveSystemEquations(parameters)
-    % R???solution de l'???quation diff???rentielle de l'article en (r,t)
-    %options = odeset('RelTol',1e-1)
+    % solved the partial differential drift diffusion equation
     [sol] = pdepe(0,@(z,t,n,DnDz) PDESolveDiffRad(z,t,n,DnDz,parameters),...
         @(z) PDEic(z,parameters),@(zl,ul,zr,ur,t) PDEbc(zl,ul,zr,ur,t,parameters),parameters.zvec,parameters.tvec);
-    %[u,dsoldx] = pdeval(0,zvec,sol,zvec);
+    
 end
 
 function [c,f,s]= PDESolveDiffRad(x,t,u,DuDx,parameters)
-% the vector is u=[ne,nh,V,ntraps]
 c=[1];
 
 % currents
