@@ -12,7 +12,7 @@
 % DEFINTION OF THE INPUTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 durationOfSimulation = 2000e-9; % in seconds
-laserFluence = 1e10; % in absorbed ph/cm²
+laserFluence = 1e10; % in absorbed ph/cmÂ²
 
 % Color Palette
 colorPalette=[  [38, 70, 83]/255,	          	
