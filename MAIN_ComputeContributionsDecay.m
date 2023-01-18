@@ -15,7 +15,7 @@ durationOfSimulation = 2000e-9; % in seconds
 laserFluence = 1e10; % in absorbed ph/cm²
 
 % Color Palette
-colorPalette=[  [38, 70, 83]/255,	          	
+colorPalette=[  [38, 70, 83]/255,	
                 [42, 157, 143]/255,	          	
                 [233, 196, 106]/255,	          	
                 [244, 162, 97]/255,	          	
