@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: SIMPLED
+message: SIMulated Photo-Luminescence Element Decomposition.
+type: software
+authors:
+  - given-names: Guillaume
+    family-names: Vidon
+    email: guillaume.vidon@cnrs.fr
+repository-code: 'https://github.com/IPVF/SIMPLED'
+abstract: Description of the code
+keywords:
+  - Solar cell
+  - Photoluminescence
+  - Drift diffusion
+  - Time resolved
+license: CC-BY-NC-SA-4.0
+date-released: '2023-01-20'
